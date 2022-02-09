@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Pizza Menu</title>
+</head>
+<link rel="stylesheet" th:href="@{/style.css}">
+<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+	float: left;
+	width: 25%;
+	padding: 0 10px;
+}
+
+.row {
+	margin: 20px -5px;
+	width: 80%;
+	margin-left: 15%;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 600px) {
+	.column {
+		width: 80%;
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 16px;
+	text-align: center;
+	background-color: #f1f1f1;
+}
+
+.img {
+	padding: 2px;
+	width: 200px;
+	margin-top: 2px;
+}
+</style>
+<body>
+	<div th:replace="page :: menu"></div>
+	<h2 style="margin-left: 15%; margin-top: 2%;">Type of Pizzas</h2><br>
+	<p style="margin-left: 15%;">Your can see the type of pizza in below</p>
+
+	<div class="row">
+		<div class="column">
+			<div class="card">
+				<img src="../static/img/m1.jpg" class="img" th:src="@{img/m1.jpg}" />
+				<div class="container">
+					<h3>Hawaiian</h3><br>
+					<div>Price : 8000 Ks</div><br>
+					<div>Size: small</div><br>
+					<div>Strips for fast expansion or removal of pizzas from hot
+						grills. They are wooden handles, with medium and large strips on
+						the 11′′ edges. A peel is a tool that is like a shovel that bakers
+						use to slide into the oven and out of a loaf of bread, pizzas,
+						pastries and other baked products. It is generally fashioned of
+						wood, with a flat supporting surface to hold the baked product and
+						a handle from one side.</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<img src="../static/img/m2.jpg" class="img" th:src="@{img/m2.jpg}" />
+				<div class="container">
+					<h3>Margaraita</h3><br>
+					<div>Price : 10000 Ks</div><br>
+					<div>Size: medium</div><br>
+					<div>Strips for fast expansion or removal of pizzas from hot
+						grills. They are wooden handles, with medium and large strips on
+						the 11′′ edges. A peel is a tool that is like a shovel that bakers
+						use to slide into the oven and out of a loaf of bread, pizzas,
+						pastries and other baked products. It is generally fashioned of
+						wood, with a flat supporting surface to hold the baked product and
+						a handle from one side.</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<img src="../static/img/m3.jpg" class="img" th:src="@{img/m3.jpg}" />
+				<div class="container">
+					<h3>Supreme</h3><br>
+					<div>Price : 15000 Ks</div><br>
+					<div>Size: Big</div><br>
+					<div>Strips for fast expansion or removal of pizzas from hot
+						grills. They are wooden handles, with medium and large strips on
+						the 11′′ edges. A peel is a tool that is like a shovel that bakers
+						use to slide into the oven and out of a loaf of bread, pizzas,
+						pastries and other baked products. It is generally fashioned of
+						wood, with a flat supporting surface to hold the baked product and
+						a handle from one side.</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="column">
+			<div class="card">
+				<img src="../static/img/m4.jpg" class="img" th:src="@{img/m4.jpg}" />
+				<div class="container">
+					<h3>Meat Lovers</h3><br>
+					<div>Price : 18000 Ks</div><br>
+					<div>Size: ONLY one Size</div><br>
+					<div>Strips for fast expansion or removal of pizzas from hot
+						grills. They are wooden handles, with medium and large strips on
+						the 11′′ edges. A peel is a tool that is like a shovel that bakers
+						use to slide into the oven and out of a loaf of bread, pizzas,
+						pastries and other baked products. It is generally fashioned of
+						wood, with a flat supporting surface to hold the baked product and
+						a handle from one side.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

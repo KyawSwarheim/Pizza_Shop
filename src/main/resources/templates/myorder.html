@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>MyOrder</title>
+<link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<style>
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 80%;
+	margin-left: 15%;
+	margin-top: 1%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+.btn {
+	background-color: #04AA6D;
+	color: white;
+	padding: 12px;
+	margin: 20px 0;
+	margin-left: 80%;
+	border: none;
+	width: 15%;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+.btn:hover {
+	background-color: #45a049;
+}
+</style>
+<body>
+	<div th:replace="page :: menu"></div>
+	<h1 style="margin-left: 15%; margin-top: 2%;">My Order</h1>
+	<div align="center">
+		
+
+		<table border="1" cellpadding="10">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Pizza Type</th>
+					<th>Size</th>
+					<th>Extra Toppings</th>
+					<th>No. of Pizza</th>
+					<th>Special Requests</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="product: ${listProducts}">
+					<td th:text="${product.id}"></td>
+					<td th:text="${product.type}"></td>
+					<td th:text="${product.size}"></td>
+					<td th:text="${product.topping}"></td>
+					<td th:text="${product.number}"></td>
+					<td th:text="${product.special_request}"></td>
+					<td>
+						<button>
+							<a th:href="@{'/edit/' + ${product.id}}">Edit</a>
+						</button>
+						<button>
+							<a th:href="@{'/delete/' + ${product.id}}">Cancel</a>
+						</button>
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<a th:href="@{/checkout}"><input type="submit" value="Continue to checkout" class="btn" ></a>
+	</div>
+</body>
+</html>

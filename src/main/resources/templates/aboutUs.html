@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>About Us</title>
+<link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<style>
+h1{
+margin-top: 20px;
+}
+h2{
+margin-top: 100px;
+}
+h4{
+text-align: left;
+margin-left: 45%;
+}
+hr{
+width: 600px;
+margin-left: 30%;
+}
+</style>
+<body>
+	<div th:replace="page :: menu"></div>
+	<form align="center">
+		<h1>About Us Page</h1><br>
+		<hr><br>
+		<b><p>This is our Third year projects. We are design by HTML, CSS,
+			and Java using springframework.</p>
+		<br><br>
+			We have
+			<i>four</i> Members.<br><br>
+			<h4>Mg Kyaw Swar Heim (Admin)</h4><br>
+			<h4>Mg Sai Syhn Han</h4><br>
+			<h4>Ma Zuu Nge Nge</h4><br>
+			<h4>Ma Nang Kham Han Hlaing</h4></b>
+		<h2>Thank You For Watch</h2>
+	</form>
+
+</body>
+</html>

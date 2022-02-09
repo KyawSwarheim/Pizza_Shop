@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+</head>
+<script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="https:/webjars/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" th:href="@{/index.css}">
+	<link rel="stylesheet" th:href="@{/.css}">
+<style>
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+	margin-right: 20px;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+	background-color: #111;
+}
+
+</style>
+
+<body>
+	<div class="container ">
+		<ul>
+			<li><a th:href="@{/}">Home</a></li>
+			<li style="float: right"><a th:href="@{/login}">Login</a></li>
+			<li style="float: right"><a th:href="@{/register}">Register</a></li>
+		</ul>
+		<div>
+			
+		</div>
+		<section>
+			<div class="rt-container">
+				<div class="col-rt-12">
+					<!-- Slider -->					
+					<div id="slider">
+						<div class="slides">
+							<div class="slider">							
+								<div class="legend"></div>
+								<div class="content">
+									<div class="content-txt">
+										<h2>Welcome Our Pizza Shop</h2>
+										<p>Nam ultrices pellentesque facilisis. In semper tellus
+											mollis nisl pulvinar vitae vulputate lorem consequat. Fusce
+											odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</p>
+									</div>
+								</div>
+								<div class="image">
+								
+									<img src="../static/img/h1.jpg" width="1000" th:src="@{img/h1.jpg}"/>
+								</div>
+							</div>
+							<div class="slider">
+								<div class="legend"></div>
+								<div class="content">
+									<div class="content-txt">
+										<h2>Welcome Our Pizza Shop</h2>
+										<p>Nam ultrices pellentesque facilisis. In semper tellus
+											mollis nisl pulvinar vitae vulputate lorem consequat. Fusce
+											odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</p>
+									</div>
+								</div>
+								<div class="image">
+									<img src="../static/img/h2.jpg" width="1000" th:src="@{img/h2.jpg}"/>
+								</div>
+							</div>
+							<div class="slider">
+								<div class="legend"></div>
+								<div class="content">
+									<div class="content-txt">
+										<h2>Welcome Our Pizza Shop</h2>
+										<p>Nam ultrices pellentesque facilisis. In semper tellus
+											mollis nisl pulvinar vitae vulputate lorem consequat. Fusce
+											odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</p>
+									</div>
+								</div>
+								<div class="image">
+									<img src="../static/img/h3.jpg" width="1000"  th:src="@{img/h3.jpg}"/>
+								</div>
+							</div>
+							<div class="slider">
+								<div class="legend"></div>
+								<div class="content">
+									<div class="content-txt">
+										<h2>Welcome Our Pizza Shop</h2>
+										<p>Nam ultrices pellentesque facilisis. In semper tellus
+											mollis nisl pulvinar vitae vulputate lorem consequat. Fusce
+											odio tortor, pretium sit amet auctor ut, ultrices vel nibh.</p>
+									</div>
+								</div>
+								<div class="image">
+									<img src="../static/img/h4.jpg" width="1000" th:src="@{img/h4.jpg}"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+</body>
+</html>

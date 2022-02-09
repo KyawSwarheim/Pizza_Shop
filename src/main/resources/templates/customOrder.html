@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Custom Order</title>
+<link rel="stylesheet" th:href="@{/style.css}">
+<style>
+label {
+	display: inline-block;
+	width: 200px;
+	margin: 5px;
+	text-align: left;
+}
+
+button {
+	margin: 10px;
+	padding: 10px;
+}
+
+input[type=text] ,select {
+	display: inline-block;
+	width: 200px;
+}
+input[type=checkbox] {
+	margin-right: 190px;
+}
+h1{
+margin-top:15px;
+}
+</style>
+</head>
+<body>
+	<div th:replace="page :: menu"></div>
+	<div align="center">
+		<h1>Create New Order</h1>
+		<br><br>
+		<form action="#" th:action="@{/save}" method="post"
+			th:object="${product}">
+			<label><b>Pizza Type</b></label>
+			<!-- <select th:field="*{type}">
+			<option th:each="ty : ${typelist}" th:value="${ty}" th:text="${ty}">Hawaiian</option>
+			</select> -->	
+			<input type="text" th:field="*{type}">
+			 <br>
+			 <label><b>Size</b></label>
+			 <input type="text" th:field="*{size}"><br>
+			 
+			 <label><b>Extra Toppings</b></label>
+			 <input type="text" th:field="*{topping}" ><br>
+			 
+			 <label><b>No.of Pizza</b></label>
+			 <input type="text" th:field="*{number}"><br><br>
+			 
+			 <label><b>Special Request</b></label>
+			 <textarea rows="5" cols="25" th:field="*{special_request}"></textarea><br>
+
+			<button type="submit" class="btn">Order</button>
+		</form>
+	</div>
+</body>
+</html>
